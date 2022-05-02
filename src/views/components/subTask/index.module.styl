@@ -1,0 +1,71 @@
+.subTaskBlock
+    width 95%
+    margin-inline 5%
+    display grid
+    grid-template-columns 50px 1fr 444px 50px
+    margin-bottom 15px
+    border-radius 5px
+    position relative
+    background rgba(63, 114, 175, 0.1)
+    &Description
+        position absolute
+        padding 15px
+        top -85px
+        font: 2rem/2em 'Roboto', sans-serif
+        background #939393
+        border-radius 5px
+        color #eee
+        &:before
+            content ''
+            display block
+            position absolute
+            bottom -7px
+            transform rotate(45deg) 
+            left 45%
+            width 15px
+            height 15px
+            background #939393
+    &Created
+    &Label
+        display grid
+        grid-template-columns auto 1fr
+        align-items center
+        padding 12px 15px
+        gap 20px
+    &Title
+        cursor pointer
+    &Checkbox
+        display none
+    &CustomCheckbox
+        width 20px 
+        height 20px
+        border 1px solid #3f72af 
+        border-radius 3px
+        cursor pointer
+        &Checked
+            background url('./images/ok.svg') no-repeat center center
+    &TitleChecked
+        text-decoration line-through
+    &EditInput
+        font: 1rem/1em 'Roboto', sans-serif
+        outline none
+        border none
+        border-radius 3px
+        background none
+        padding 2px 5px
+        box-shadow 0 4px 0 -3px #3f7af3
+    &Edit, &Remove, &Save
+        display block
+        border none
+        background none no-repeat center center
+        cursor pointer
+        padding 0
+        transition opacity .3s
+        &:hover
+            opacity 0.7
+    &Edit
+        background-image url('./images/edit.svg')
+    &Remove
+        background-image url('./images/trash.svg')
+    &Save
+        background-image url('./images/check.svg')
